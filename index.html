@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning Wishes!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+    <style>
+        /* --- Basic Setup & Background --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Tiro Devanagari Hindi', sans-serif;
+            text-align: center;
+            /* Sunrise Gradient Background */
+            background: linear-gradient(160deg, #ff9a8b 0%, #ff6a88 50%, #ff99ac 100%);
+            color: white;
+            padding: 15px 15px 0 15px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
+        }
+        
+        /* --- Main Content Container --- */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* --- 1. Top GIF --- */
+        #top-gif {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            margin-bottom: 20px;
+        }
+
+        /* --- 3. Sender Name Display --- */
+        #sender-name-display {
+            display: none; /* By default hidden */
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            margin: 0 auto 20px auto;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            max-width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* --- 2. Hindi Greeting with Sunrise Effect --- */
+        .greeting-message {
+            margin-bottom: 25px;
+            animation: sunrise-text-glow 2s ease-in-out forwards;
+        }
+
+        .greeting-message h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .greeting-message p {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        @keyframes sunrise-text-glow {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffab00; }
+        }
+        
+        /* --- 4. Your Name Input Box --- */
+        .input-container {
+            margin-top: 20px;
+        }
+        #name-input {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            margin-bottom: 20px;
+        }
+        #name-input::placeholder { color: #888; }
+
+        /* --- 5. Social Share Buttons --- */
+        .share-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+        .whatsapp-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .other-socials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icon {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        .social-icon:hover { transform: scale(1.15); }
+        .social-icon svg { width: 40px; height: 40px; }
+        
+        /* Ad Banners Styling */
+        .ad-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+        }
+        .ad-bottom {
+             padding-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Upper Banner Ad -->
+    <div class="ad-container ad-top">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '122e068e28c1046abe04bbce3b95702c',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/122e068e28c1046abe04bbce3b95702c/invoke.js"></script>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="container">
+            <!-- 1. Top GIF -->
+            <img id="top-gif" src="./gm.gif" alt="Good Morning GIF">
+            
+            <!-- 3. Sender's Name Box (यह सिर्फ शेयर किए गए लिंक पर दिखेगा) -->
+            <div id="sender-name-display"></div>
+
+            <!-- 2. Hindi Greeting Message -->
+            <div class="greeting-message">
+                <h1>सुप्रभात!</h1>
+                <p>
+                    नई सुबह, नई उम्मीदों का सवेरा है,<br>
+                    सूरज की किरणें लाईं खुशियों का डेरा है।<br>
+                    मुस्कुरा कर करो इस दिन का स्वागत,<br>
+                    आपका हर पल खास और सुनहरा है।
+                </p>
+            </div>
+
+            <!-- 4. Your Name Input Box (For new sharing) -->
+            <div class="input-container">
+                <input type="text" id="name-input" placeholder="यहाँ अपना नाम लिखें">
+            </div>
+
+            <!-- 5. Share Buttons Section -->
+            <div class="share-container">
+                <a href="#" id="whatsapp-share" class="whatsapp-button" aria-label="Share on WhatsApp">
+                    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.044-.53-.044-.302 0-.53.09-.665.25-.273.318-.92.9-.92 2.16 0 1.116.86 2.123.978 2.274a4.33 4.33 0 0 0 3.82 3.791.704.704 0 0 0 .83.003c.33-.15.993-.97 1.214-1.22s.22-.25.354-.25c.133 0 .306 0 .43.15.16.19.754.71 1.268.972.512.264 1.4.212 1.625.12.224-.092.683-.372.52-.714-.143-.372-.662-1.19-1.054-1.49zM16.002 0a16 16 0 1 0 16 16 16 16 0 0 0-16-16z"/></svg>
+                    <span>WhatsApp Share</span>
+                </a>
+                <div class="other-socials">
+                    <a href="#" id="facebook-share" class="social-icon" aria-label="Share on Facebook" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="#1877F2"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 5.52 4.5 10.02 10 10.02s10-4.5 10-10.02C22 6.53 17.5 2.04 12 2.04zM16.5 12.3h-2.1v6.8H12v-6.8H9.9v-2.4h2.1V8.4c0-1.9 1.1-3.1 3.2-3.1h1.9v2.4h-1.4c-.9 0-1 .4-1 1v1.6h2.5l-.4 2.4z"/></svg>
+                    </a>
+                    <a href="#" id="twitter-share" class="social-icon" aria-label="Share on Twitter" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="#1DA1F2"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085c.645 1.956 2.51 3.375 4.73 3.415A9.87 9.87 0 010 17.53a13.94 13.94 0 007.548 2.212c9.058 0 14.01-7.502 14.01-14.013 0-.213-.005-.426-.015-.637a10.035 10.035 0 002.455-2.54z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lower Banner Ad -->
+    <div class="ad-container ad-bottom">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '0897ca1a85eb6eed800d1e5acdad651f',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/0897ca1a85eb6eed800d1e5acdad651f/invoke.js"></script>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameInput = document.getElementById('name-input');
+            const senderDisplay = document.getElementById('sender-name-display');
+            
+            // --- URL से नाम को पढ़ने और दिखाने का कोड ---
+            const urlParams = new URLSearchParams(window.location.search);
+            const senderName = urlParams.get('name');
+
+            if (senderName && senderName.trim() !== '') {
+                // यहाँ "नाम:" जोड़ा गया है
+                senderDisplay.innerHTML = `<strong>नाम:</strong> ${decodeURIComponent(senderName)} की ओर से शुभकामनाएं!`;
+                senderDisplay.style.display = 'block';
+            }
+            
+            // --- शेयर लिंक जेनरेट करने का कोड ---
+            // यह फंक्शन हमेशा इनपुट बॉक्स से नया नाम लेता है, जिससे चेन सिस्टम बनता है
+            function generateShareLinks() {
+                const newName = nameInput.value.trim();
+                const siteUrl = window.location.origin + window.location.pathname;
+                
+                // अगर नए नाम वाले बॉक्स में कुछ लिखा है, तो उसे URL में जोड़ो
+                // वरना बिना नाम के URL बनाओ
+                const shareUrl = newName ? `${siteUrl}?name=${encodeURIComponent(newName)}` : siteUrl;
+                
+                const greetingText = `☀️ *सुप्रभात!* ☀️\n\nमैंने आपके लिए एक ख़ास सुबह का संदेश भेजा है! इसे खोलने के लिए नीचे दिए गए लिंक पर क्लिक करें:\n\n`;
+                const whatsappMessage = encodeURIComponent(greetingText + shareUrl);
+                const twitterText = encodeURIComponent("आपको एक ख़ास सुबह की शुभकामनाएं! ☀️");
+
+                document.getElementById('whatsapp-share').href = `whatsapp://send?text=${whatsappMessage}`;
+                document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+                document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${twitterText}`;
+            }
+
+            // जब भी कोई इनपुट बॉक्स में लिखे, तो लिंक तुरंत अपडेट हों
+            nameInput.addEventListener('keyup', generateShareLinks);
+            
+            // पेज लोड होने पर भी एक बार लिंक बना दें
+            generateShareLinks();
+        });
+    </script>
+</body>
+</html>
